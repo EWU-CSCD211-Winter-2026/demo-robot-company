@@ -1,7 +1,7 @@
 
 package test;
 
-import package1.MyClass;
+import model.*;
 
 public class App {
 
@@ -15,6 +15,14 @@ public class App {
             {"E", "F", "G", "H", "I"}
        }
         ;
+        Lawyer l = new Lawyer("Alice");
+        System.out.println("Lawyer: " + l);
+        // l.setSalary(0);
+        System.out.println("l's salary: " + l.getSalary());
+
+        Marketer m = new Marketer("Bob");
+        System.out.println("m's salary: " + m.getSalary());
+
 
        /*
 
@@ -26,12 +34,14 @@ public class App {
         Bob
         Charlie
         */
-       for (int i = 0; i < listOfNames.length; i++) {
-           for (int j = 0; j < listOfNames[i].length; j++) {
-                System.out.print("Name: " + listOfNames[i][j] + " ");
-           }
-           System.out.println();
-       }
+    //    for (int i = 0; i < listOfNames.length; i++) {
+    //        for (int j = 0; j < listOfNames[i].length; j++) {
+    //             System.out.print("Name: " + listOfNames[i][j] + " ");
+    //        }
+    //        System.out.println();
+    //    }
+
+
        
        
 

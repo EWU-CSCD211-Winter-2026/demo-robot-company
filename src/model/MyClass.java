@@ -1,5 +1,5 @@
 
-package package1;
+package model;
 
 public class MyClass {
 
