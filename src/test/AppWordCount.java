@@ -47,7 +47,7 @@ public class AppWordCount {
         if (text == null || text.isEmpty()) {
             return new ArrayList<>();
         }
-        String[] words = text.split("\\s+");
+        String[] words = text.split("[ ]+");
 
         Map<String, Integer> wordCount = new HashMap<>();
 
@@ -65,10 +65,10 @@ public class AppWordCount {
         // Map.keySet() returns an implementation of a Set, which is a collection that contains no duplicate elements.
         // The ArrayList constructor can take a Collection as an argument and creates a new ArrayList containing the elements of the specified collection, in the order they are returned by the collection's iterator.
         List<String> keys = new ArrayList<>(wordCount.keySet());
-        
+        List<WordCount> wordCounts = new ArrayList<>();
         for (int i = 0; i < keys.size(); i++) {
-            WordCount wordCount = new WordCount(keys.get(i), wordCount.get(keys.get(i)));
-            wordCounts.add(wordCount);
+            WordCount wordCount1 = new WordCount(keys.get(i), wordCount.get(keys.get(i)));
+            wordCounts.add(wordCount1);
         }
 
         Collections.sort(wordCounts);
